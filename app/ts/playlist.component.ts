@@ -1,4 +1,5 @@
 import {Component} from 'angular2/core';
+import {Video} from './video'
 
 @Component({
     selector: 'playlist',
@@ -6,4 +7,9 @@ import {Component} from 'angular2/core';
     inputs: ['videos']
 })
 
-export class PlaylistComponent {}
+export class PlaylistComponent {
+    onselect(vid:Video) {
+        console.log(JSON.stringify(vid));
+
+    }
+}
